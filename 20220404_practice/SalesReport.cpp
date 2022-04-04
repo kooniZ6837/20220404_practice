@@ -18,7 +18,7 @@ SalesReport::SalesReport(const size_t& number)
 		//team = make_unique<Salesman[]>(m_number);
 		//team = shared_ptr<Salesman[]>(new Salesman[m_number]);
 		//for (size_t i = 0; i < m_number; i++) {
-		//	team[i].readInput();
+		//	team->readInput();
 		//}
 	}
 	else
@@ -78,15 +78,14 @@ size_t SalesReport::getNumber()
 
 void SalesReport::readInput()
 {
-	if (m_count < m_number)
+	while (m_count < m_number)
 	{
+
 		team[m_count] = shared_ptr<Salesman>(new Salesman);
 		team[m_count]->readInput();
 		++m_count;
+
 	}
-	else
-	{
-		cout << "¾ÈµÅ!";
-	}
+
 
 }

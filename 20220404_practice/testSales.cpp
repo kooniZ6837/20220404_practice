@@ -9,12 +9,10 @@ using namespace std;
 #endif
 
 int main() {
+	cout << "학번 : 201710931 이름 : 송진욱"<<endl;
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	
 	SalesReport team1(3);	
-
-	team1.readInput();
-	team1.readInput();
 	team1.readInput();
 	team1.computeStats();	
 	cout << team1.getBestClerk().getSalesmanInfo() << endl;
